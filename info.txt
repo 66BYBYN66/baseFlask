@@ -1,0 +1,10 @@
+Библеотеки:
+pip install flask flask-sqlalchemy flask-mail flask-login pymysql flask-wtf bcrypt email_validator requests python-binance
+
+Чтобы создать бд:
+    from models import db
+    db.create_all()
+
+Чтобы удалить бд нужно:
+    from main import db
+    db.drop_all()

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Базовый шаблон</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block headLinks %}{% endblock %}
+</head>
+<body>
+  <ul>
+      <li>
+          <a href="{{ url_for('reg_usr') }}">Reg</a>
+      </li>
+      <li>
+          <a href="{{ url_for('login') }}">Login</a>
+      </li>
+  </ul>
+  {% block body %}{% endblock %}
+
+</body>
+</html>

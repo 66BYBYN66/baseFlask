@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block headLinks %}
+{% endblock %}
+
+
+{% block body %}
+    <h1>Register Page</h1>
+
+<form method="POST">
+    {{ form.csrf_token }}
+    {% if form.csrf_token.errors %}
+      <h2>ERROR csrf</h2>
+    {% endif %}
+
+    <p>
+        Почта:
+        {{ form.email(autocomplete="off")}}
+    </p>
+
+    <p>
+        Логин
+        {{ form.login(autocomplete="off") }}
+    </p>
+
+    <p>
+        Пароль
+        {{ form.password(autocomplete="off") }}
+    </p>
+
+    <a href="{{ url_for('login') }}" class="go-to-reg-login"> Войти </a>
+
+    {{ form.submit() }}
+  </form>
+{% endblock %}
